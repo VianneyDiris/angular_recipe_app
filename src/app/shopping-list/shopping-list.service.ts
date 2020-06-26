@@ -1,12 +1,20 @@
-import { Recipe } from '../recipes/recipe.model';
+import { Ingredient } from './../shared/ingredient.model';
+import { EventEmitter } from '@angular/core';
 
 export class ShoppingListService {
-  private recipes: Recipe[] = [
-    new Recipe('Recipe 1', 'this is a test for a recipe 1', 'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_1280.jpg'),
-    new Recipe('Recipe 2', 'this is a test for a recipe 2', 'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_1280.jpg')
+  ingredientChanged = new EventEmitter<Ingredient[]>();
+  private ingredients: Ingredient[] = [
+    new Ingredient('Apples', 5),
+    new Ingredient('Tomatoes', 10)
   ];
 
-  getRecipes(){
-    return this.recipes.slice();
+  getIngredients(){
+    return this.ingredients.slice();
   }
+
+  addIngredient(ingredient: Ingredient){
+    this.ingredients.push(ingredient);
+    this.ingredientChanged.emit(this.ingredients.slice());
+  }
+
 }
