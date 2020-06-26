@@ -13,7 +13,7 @@
     <div class="btn-group dropdown">
       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-flip="false" aria-haspopup="true">Manage Recipe</button>
       <ul class="dropdown-menu" appDropdown>
-        <li><a href="#" class="dropdown-item">Add ingredients to shopping list</a></li>
+        <li><a (click)="onAddToShoppingList()" style="cursor: pointer;" class="dropdown-item">Add ingredients to shopping list</a></li>
         <li><a href="#" class="dropdown-item">Edit Recipe</a></li>
         <li><a href="#" class="dropdown-item">Delete Recipe</a></li>
       </ul>
