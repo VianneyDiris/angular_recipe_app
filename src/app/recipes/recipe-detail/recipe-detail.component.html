@@ -14,7 +14,7 @@
       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-flip="false" aria-haspopup="true">Manage Recipe</button>
       <ul class="dropdown-menu" appDropdown>
         <li><a (click)="onAddToShoppingList()" style="cursor: pointer;" class="dropdown-item">Add ingredients to shopping list</a></li>
-        <li><a style="cursor: pointer;" class="dropdown-item">Edit Recipe</a></li>
+        <li><a style="cursor: pointer;" class="dropdown-item" (click)="onEditRecipe()">Edit Recipe</a></li>
         <li><a style="cursor: pointer;" class="dropdown-item">Delete Recipe</a></li>
       </ul>
     </div>
